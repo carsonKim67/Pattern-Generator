@@ -8,6 +8,8 @@ public class PatternGen {
         stars(7);
         triangle(5);
         eo(6);
+        odds(7);
+        pyramid(5);
     }
 
     public static void stars(int rows) {
@@ -90,7 +92,14 @@ public class PatternGen {
     }
     public static void pyramid(int rows){
         for(int i = 1; i<=rows;i++){
-            
+            for(int j = 1;j<rows;j++){
+                System.out.print(" ");
+            }
+            for(int k = 1;k<=(2*i)-1;k++){
+                System.out.print(i);
+            }
+            System.out.println();
         }
 
+}
 }
