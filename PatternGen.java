@@ -8,10 +8,15 @@
 public class PatternGen {
     public static void main(String[] args) {
         //calls all methods to generate patterns - copied the # of rows/starting number/max lines from directions doc
+        //blank prints in between patterns to separate them
         stars(7);
+        System.out.println("");
         triangle(9);
+        System.out.println("");
         odds(9);
+        System.out.println("");
         eo(6);
+        System.out.println("");
         pyramid(5);
     }
 //pre con - number of rows to print
@@ -59,7 +64,7 @@ public class PatternGen {
         boolean startE= (maxE%2 != 0);
         for(int i = 1; i<=maxE;i++){
             char character;
-            //determine startingcharacter
+            //determine starting character
             if(startE){
                 if(i%2 != 0){
                     character = 'E';
