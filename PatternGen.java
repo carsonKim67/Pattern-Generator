@@ -1,12 +1,13 @@
 //Carson Kim
 //11/5/25
 //Pattern Generator that generates different lines of pattern with the use of different loops
+//no user input
 
 //pre con - have other methods to call that generate patterns
 //post con - prints out different patterns based on the method called
 public class PatternGen {
     public static void main(String[] args) {
-        //calls all methods to generate patterns
+        //calls all methods to generate patterns - copied the # of rows/starting number/max lines from directions doc
         stars(7);
         triangle(9);
         odds(9);
@@ -58,6 +59,7 @@ public class PatternGen {
         boolean startE= (maxE%2 != 0);
         for(int i = 1; i<=maxE;i++){
             char character;
+            //determine startingcharacter
             if(startE){
                 if(i%2 != 0){
                     character = 'E';
@@ -80,6 +82,7 @@ public class PatternGen {
         //bottom half
         for(int i = maxE-1;i>=1;i--){
             char character;
+            //determine starting character
             if(startE){
                 if(i%2 != 0){
                     character = 'E';
@@ -104,9 +107,11 @@ public class PatternGen {
     //post con - prints out a pyramid of numbers with the number of rows given
     public static void pyramid(int rows){
         for(int i = 1; i<=rows;i++){
+            //print spaces
             for(int j = 1;j<i;j++){
                 System.out.print(" ");
             }
+            //print numbers
             int numCount = (rows-i)*2+1;
             for(int k = 0;k<numCount;k++){
                 System.out.print(i);
