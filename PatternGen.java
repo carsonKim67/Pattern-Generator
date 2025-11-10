@@ -24,10 +24,15 @@ public class PatternGen {
     public static void stars(int rows) {
         int i = 1;
         while (i <= rows) {
+            int k = 1;
             int j = 1;
-            while (j <= i) {
+            while (k==1){
                 System.out.print("*");
-                j++;
+                k++;
+            }
+                while (j < i) {
+                    System.out.print("**");
+                    j++;
             }
             System.out.println();
             i++;
